@@ -1,0 +1,14 @@
+{
+  "name": "CIS 774 - GnuCOBOL",
+  "build": { "dockerfile": "Dockerfile" },
+  "customizations": {
+    "vscode": {
+      "extensions": ["bitlang.cobol"],
+      "settings": {
+        "files.associations": {"*.cob": "cobol", "*.cbl": "cobol"},
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/verify.sh"
+}

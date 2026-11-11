@@ -1,0 +1,10 @@
+# Compiled binaries and generated data
+*.exe
+*.o
+*.so
+*.dll
+*.out
+bankdata.txt
+students.txt
+.vscode/*.log
+.DS_Store
