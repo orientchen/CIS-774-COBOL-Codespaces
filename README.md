@@ -40,7 +40,7 @@ If a compiler reports unexpected syntax errors, first check whether the file is 
 
 - `examples/` — original instructor-provided examples (fixed-format introductory programs and free-format examples)
 - `exercises/` — seven student starter files, with TODO prompts; see `exercises/README.md`
-- `project/` — original partially completed Simple Banking System and instructions
+- `project/` — mini-project materials, including `ProgramSkeleton.cob`, the partially completed Simple Banking System, and instructions
 - `lectures/` — supplied COBOL lecture presentation
 - `setup-guides/` — supplied local Windows/macOS installation guides (not required in Codespaces)
 - `.devcontainer/` — automatic compiler and VS Code extension setup
