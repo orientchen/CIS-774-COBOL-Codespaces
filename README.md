@@ -42,6 +42,7 @@ If a compiler reports unexpected syntax errors, first check whether the file is 
 - `exercises/` — seven student starter files, with TODO prompts; see `exercises/README.md`
 - `project/` — mini-project materials, including `ProgramSkeleton.cob`, the partially completed Simple Banking System, and instructions
 - `lectures/` — supplied COBOL lecture presentation
+- `notes/PIC-Clause.md` — concise PIC clause reference with syntax, common characters, and examples
 - `setup-guides/` — supplied local Windows/macOS installation guides (not required in Codespaces)
 - `.devcontainer/` — automatic compiler and VS Code extension setup
 
