@@ -4,7 +4,7 @@
 
 This lecture guide follows the original *Learn COBOL with code examples* handout. The code links now point to the instructor examples in this GitHub repository rather than the Canvas file downloads.
 
-> **File organization:** `examples/` contains the instructor examples linked below. `exercises/` contains separate student starter exercises (`Ex_*.cob`). The original handout's `HelloWorld-1.cob` is **not** currently in the repository; `ProgramSkeleton.cob` is the available program-structure example, but it is not an identical Hello World file.
+> **File organization:** `examples/` contains the instructor examples linked below. `exercises/` contains separate student starter exercises (`Ex_*.cob`). The original handout's `HelloWorld-1.cob` is **not** currently in the repository. `ProgramSkeleton.cob` is a separate starter template for Assignment 5: COBOL Mini Project, not a lecture example.
 
 ## 1. Hello World and Program Structure
 
@@ -15,7 +15,9 @@ Basic COBOL program structure:
 - `DATA DIVISION`
 - `PROCEDURE DIVISION`
 
-**Code:** [ProgramSkeleton.cob](../examples/ProgramSkeleton.cob) — demonstrates the divisions, variables, and procedure paragraphs. The original handout referred to `HelloWorld-1.cob`, which is not in the current repository.
+**Original lecture code:** `HelloWorld-1.cob` (referenced in the PDF, but not currently present in this repository).
+
+**Note:** `ProgramSkeleton.cob` is reserved for **Assignment 5: COBOL Mini Project** and is not the introductory Hello World example.
 
 ## 2. Variables and Arithmetic
 
