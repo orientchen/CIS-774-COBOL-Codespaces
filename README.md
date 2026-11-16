@@ -16,22 +16,22 @@ No separate Windows or macOS compiler installation is needed **inside Codespaces
 Most original introductory examples use **fixed-format** COBOL (the traditional column layout). Compile them with the default fixed-format setting:
 
 ```bash
-cobc -x examples/VariablesArithmetic.cob -o /tmp/variables-arithmetic
-/tmp/variables-arithmetic
+cobc -x examples/VariablesArithmetic.cob -o variables-arithmetic
+./variables-arithmetic
 ```
 
 To compile a program explicitly in **free format**, use `-free` (or include `>>SOURCE FORMAT FREE` at the start of the source):
 
 ```bash
-cobc -x -free exercises/Ex_VariablesArithmetic.cob -o /tmp/ex1
-/tmp/ex1
+cobc -x -free exercises/Ex_VariablesArithmetic.cob -o ex1
+./ex1
 ```
 
 Subprogram example (source contains a free-format directive):
 
 ```bash
-cobc -x examples/SubprogramMain.cob examples/SQUAREPROG.cob -o /tmp/subprogram
-/tmp/subprogram
+cobc -x examples/SubprogramMain.cob examples/SQUAREPROG.cob -o subprogram
+./subprogram
 ```
 
 If a compiler reports unexpected syntax errors, first check whether the file is fixed-format or free-format. **The Bitlang extension provides editing support; GnuCOBOL (`cobc`) performs compilation.**
