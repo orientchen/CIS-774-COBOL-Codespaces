@@ -4,7 +4,7 @@
 
 This lecture guide follows the original *Learn COBOL with code examples* handout. The code links now point to the instructor examples in this GitHub repository rather than the Canvas file downloads.
 
-> **File organization:** `examples/` contains the instructor examples linked below. `exercises/` contains separate student starter exercises (`Ex_*.cob`). The mini-project starter `ProgramSkeleton.cob` is used for Assignment 5, not for this introductory lecture.
+> **File organization:** `examples/` contains lecture examples; `exercises/` contains student practice exercises (`Ex_*.cob`); `project/` contains the mini-project materials.
 
 ## 1. Hello World and Program Structure
 
@@ -16,8 +16,6 @@ Basic COBOL program structure:
 - `PROCEDURE DIVISION`
 
 **Code:** [HelloWorld-1.cob](../examples/HelloWorld-1.cob) — a simple program that displays `Hello, world!`.
-
-**Note:** `ProgramSkeleton.cob` is reserved for **Assignment 5: COBOL Mini Project** and is not the introductory Hello World example.
 
 ## 2. Variables and Arithmetic
 
@@ -151,10 +149,14 @@ cobc -x examples/VariablesArithmetic.cob -o /tmp/variables-arithmetic
 /tmp/variables-arithmetic
 ```
 
-Most introductory examples use traditional fixed-format COBOL. The `ProgramSkeleton.cob` and `SubprogramMain.cob` files contain a free-format source directive. Student exercise starters use free format and can be compiled with `-free`.
+Most introductory examples use traditional fixed-format COBOL. `SubprogramMain.cob` contains a free-format source directive. Student exercise starters use free format and can be compiled with `-free`.
 
 See the [repository README](../README.md) for Codespaces setup and more compilation instructions.
 
 ## Student Practice
 
 After reviewing the examples, complete the [seven in-class exercises](../exercises/README.md). The starter files are in [`exercises/`](../exercises/), separate from the instructor examples in [`examples/`](../examples/).
+
+## Mini Project
+
+For Assignment 5, use the [ProgramSkeleton.cob](../project/ProgramSkeleton.cob) starter in the [`project/`](../project/) folder along with the project instructions.
