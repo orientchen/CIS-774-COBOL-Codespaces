@@ -1,0 +1,25 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. FILEREAD.
+       ENVIRONMENT DIVISION.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+           SELECT STUDENT-FILE ASSIGN TO "students.txt"
+               ORGANIZATION IS LINE SEQUENTIAL.
+       DATA DIVISION.
+       FILE SECTION.
+       FD STUDENT-FILE.
+       01 STUDENT-RECORD PIC A(50).
+       WORKING-STORAGE SECTION.
+       01 END-OF-FILE PIC 9 VALUE 0.
+       PROCEDURE DIVISION.
+           OPEN INPUT STUDENT-FILE.
+           PERFORM UNTIL END-OF-FILE = 1
+               READ STUDENT-FILE
+                   AT END
+                       MOVE 1 TO END-OF-FILE
+                   NOT AT END
+                       DISPLAY FUNCTION TRIM(STUDENT-RECORD)
+               END-READ
+           END-PERFORM.
+           CLOSE STUDENT-FILE.
+           STOP RUN.
