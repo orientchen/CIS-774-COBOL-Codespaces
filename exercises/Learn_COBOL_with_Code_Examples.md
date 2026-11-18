@@ -133,12 +133,23 @@ Julia Lewis
 - [SubprogramMain.cob](../examples/SubprogramMain.cob) — the calling program
 - [SQUAREPROG.cob](../examples/SQUAREPROG.cob) — the called program that calculates a square
 
-Compile both together from the repository root:
+Compile and link the programs separately from the repository root:
 
 ```bash
-cobc -x examples/SubprogramMain.cob examples/SQUAREPROG.cob -o /tmp/subprogram
-/tmp/subprogram
+# 1. Compile the subprogram (fixed format)
+cobc -c examples/SQUAREPROG.cob -o SQUAREPROG.o
+
+# 2. Compile the main program (free format)
+cobc -c -free examples/SubprogramMain.cob -o SubprogramMain.o
+
+# 3. Link both object files into an executable
+cobc -x SubprogramMain.o SQUAREPROG.o -o SubprogramMain
+
+# 4. Run the program
+./SubprogramMain
 ```
+
+The two source files can be compiled in either order. Both object files must exist before linking. The main program calls `SQUAREPROG` using `CALL ... USING`.
 
 ## Using GitHub Codespaces
 
