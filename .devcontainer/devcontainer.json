@@ -1,11 +1,18 @@
 {
   "name": "CIS 774 - GnuCOBOL",
-  "build": { "dockerfile": "Dockerfile" },
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
   "customizations": {
     "vscode": {
-      "extensions": ["bitlang.cobol"],
+      "extensions": [
+        "bitlang.cobol"
+      ],
       "settings": {
-        "files.associations": {"*.cob": "cobol", "*.cbl": "cobol"},
+        "files.associations": {
+          "*.cob": "BITLANG-COBOL",
+          "*.cbl": "BITLANG-COBOL"
+        },
         "terminal.integrated.defaultProfile.linux": "bash"
       }
     }
