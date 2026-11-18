@@ -141,14 +141,24 @@ END-STRING.
 - Reading and writing text files
 - File control and record structures
 
-**Code:** [FileIO.cob](FileIO.cob) — writes student names into `students.txt`. Reading names is a separate student exercise.
+**Code files:**
 
-Compile and run from the repository root:
+- [FileIO.cob](FileIO.cob) — writes student names into `students.txt` using `OPEN OUTPUT` and `WRITE`.
+- [FileRead.cob](FileRead.cob) — reads and displays student names from `students.txt` using `OPEN INPUT`, `READ`, and `AT END`.
+
+Compile and run from the repository root. Run the writing example first to create the input file:
 
 ```bash
+# 1. Write student names to students.txt
 cobc -x examples/FileIO.cob -o FileIO
 ./FileIO
+
+# 2. Read student names from students.txt
+cobc -x examples/FileRead.cob -o FileRead
+./FileRead
 ```
+
+Enter `END` to finish entering names in the first program. The reading program displays each name until it reaches the end of the file. Both programs use fixed-format COBOL.
 
 Example student names from the handout:
 
@@ -214,7 +224,7 @@ See the [repository README](../README.md) for Codespaces setup and more compilat
 
 ## Student Practice
 
-After reviewing the examples, complete the [seven in-class exercises](../exercises/README.md). The starter files are in [`exercises/`](../exercises/), separate from the instructor examples in [`examples/`]().
+After reviewing the examples, complete the [seven in-class exercises](../exercises/README.md). The starter files are in [`exercises/`](../exercises/), separate from the instructor examples in [`examples/`](./).
 
 ## Mini Project
 
