@@ -17,6 +17,13 @@ Basic COBOL program structure:
 
 **Code:** [HelloWorld-1.cob](../examples/HelloWorld-1.cob) — a simple program that displays `Hello, world!`.
 
+Compile and run from the repository root:
+
+```bash
+cobc -x examples/HelloWorld-1.cob -o HelloWorld-1
+./HelloWorld-1
+```
+
 ## 2. Variables and Arithmetic
 
 - Data types in the `DATA DIVISION`
@@ -24,6 +31,13 @@ Basic COBOL program structure:
 - Arithmetic verbs: `ADD`, `SUBTRACT`, `MULTIPLY`, `DIVIDE`
 
 **Code:** [VariablesArithmetic.cob](../examples/VariablesArithmetic.cob) — uses `ADD` and `MULTIPLY`.
+
+Compile and run from the repository root:
+
+```bash
+cobc -x examples/VariablesArithmetic.cob -o VariablesArithmetic
+./VariablesArithmetic
+```
 
 Example declarations:
 
@@ -58,12 +72,26 @@ COBOL uses level numbers to define the structure of data.
 
 **Code:** [InputOutput.cob](../examples/InputOutput.cob)
 
+Compile and run from the repository root:
+
+```bash
+cobc -x examples/InputOutput.cob -o InputOutput
+./InputOutput
+```
+
 ## 4. Conditional Logic
 
 - `IF`, `ELSE`, `END-IF`
 - Comparisons such as `=`, `>`, and `<`
 
 **Code:** [ConditionLogic.cob](../examples/ConditionLogic.cob)
+
+Compile and run from the repository root:
+
+```bash
+cobc -x examples/ConditionLogic.cob -o ConditionLogic
+./ConditionLogic
+```
 
 ## 5. Loops and Iteration
 
@@ -72,12 +100,26 @@ COBOL uses level numbers to define the structure of data.
 
 **Code:** [Loops.cob](../examples/Loops.cob)
 
+Compile and run from the repository root:
+
+```bash
+cobc -x examples/Loops.cob -o Loops
+./Loops
+```
+
 ## 6. Working with Strings
 
 - `STRING` and `UNSTRING`
 - Concatenation and splitting
 
 **Code:** [WorkWithStrings.cob](../examples/WorkWithStrings.cob) — demonstrates `STRING`. The `UNSTRING` activity is in the student exercises.
+
+Compile and run from the repository root:
+
+```bash
+cobc -x examples/WorkWithStrings.cob -o WorkWithStrings
+./WorkWithStrings
+```
 
 ### Understanding the `STRING` statement
 
@@ -101,6 +143,13 @@ END-STRING.
 
 **Code:** [FileIO.cob](../examples/FileIO.cob) — writes student names into `students.txt`. Reading names is a separate student exercise.
 
+Compile and run from the repository root:
+
+```bash
+cobc -x examples/FileIO.cob -o FileIO
+./FileIO
+```
+
 Example student names from the handout:
 
 ```text
@@ -122,6 +171,13 @@ Julia Lewis
 - Using `OCCURS`
 
 **Code:** [Table.cob](../examples/Table.cob)
+
+Compile and run from the repository root:
+
+```bash
+cobc -x examples/Table.cob -o Table
+./Table
+```
 
 ## 9. Subprograms and Modular Design
 
@@ -150,14 +206,9 @@ The subprogram is compiled into an object file first. The next command compiles 
 
 ## Using GitHub Codespaces
 
-From the repository root, compile a fixed-format introductory example with GnuCOBOL:
+Run all commands from the repository root. The introductory examples use fixed-format COBOL, so no `-free` option is needed. Section 9 shows the separate compilation and linking commands for the free-format main program and fixed-format subprogram.
 
-```bash
-cobc -x examples/VariablesArithmetic.cob -o /tmp/variables-arithmetic
-/tmp/variables-arithmetic
-```
-
-Most introductory examples use traditional fixed-format COBOL. `SubprogramMain.cob` contains a free-format source directive. Student exercise starters use free format and can be compiled with `-free`.
+`SubprogramMain.cob` contains a free-format source directive and is explicitly compiled with `-free` in Section 9. Student exercise starters use free format and can also be compiled with `-free`.
 
 See the [repository README](../README.md) for Codespaces setup and more compilation instructions.
 
