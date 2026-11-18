@@ -48,6 +48,15 @@ cobc -x -free examples/SubprogramMain.cob SQUAREPROG.o -o SubprogramMain
 ./SubprogramMain
 ```
 
+File input/output examples (run the writer first to create `students.txt`):
+
+```bash
+cobc -x examples/FileIO.cob -o FileIO
+./FileIO
+cobc -x examples/FileRead.cob -o FileRead
+./FileRead
+```
+
 See [Learn COBOL with Code Examples](examples/Learn_COBOL_with_Code_Examples.md) for compile-and-run commands for every lecture example.
 
 If a compiler reports unexpected syntax errors, first check whether the file is fixed-format or free-format. **The Bitlang extension provides editing support; GnuCOBOL (`cobc`) performs compilation.**
