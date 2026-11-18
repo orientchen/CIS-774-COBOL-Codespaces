@@ -139,17 +139,14 @@ Compile and link the programs separately from the repository root:
 # 1. Compile the subprogram (fixed format)
 cobc -c examples/SQUAREPROG.cob -o SQUAREPROG.o
 
-# 2. Compile the main program (free format)
-cobc -c -free examples/SubprogramMain.cob -o SubprogramMain.o
+# 2. Compile the main program (free format) and link the subprogram
+cobc -x -free examples/SubprogramMain.cob SQUAREPROG.o -o SubprogramMain
 
-# 3. Link both object files into an executable
-cobc -x SubprogramMain.o SQUAREPROG.o -o SubprogramMain
-
-# 4. Run the program
+# 3. Run the program
 ./SubprogramMain
 ```
 
-The two source files can be compiled in either order. Both object files must exist before linking. The main program calls `SQUAREPROG` using `CALL ... USING`.
+The subprogram is compiled into an object file first. The next command compiles the main program, generates the executable entry point, and links the subprogram object file. The main program calls `SQUAREPROG` using `CALL ... USING`.
 
 ## Using GitHub Codespaces
 
