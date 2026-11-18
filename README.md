@@ -40,12 +40,15 @@ cobc -x -free exercises/Ex_VariablesArithmetic.cob -o ex1
 ./ex1
 ```
 
-Subprogram example (source contains a free-format directive):
+Subprogram example (free-format main program and fixed-format subprogram):
 
 ```bash
-cobc -x examples/SubprogramMain.cob examples/SQUAREPROG.cob -o subprogram
-./subprogram
+cobc -c examples/SQUAREPROG.cob -o SQUAREPROG.o
+cobc -x -free examples/SubprogramMain.cob SQUAREPROG.o -o SubprogramMain
+./SubprogramMain
 ```
+
+See [Learn COBOL with Code Examples](examples/Learn_COBOL_with_Code_Examples.md) for compile-and-run commands for every lecture example.
 
 If a compiler reports unexpected syntax errors, first check whether the file is fixed-format or free-format. **The Bitlang extension provides editing support; GnuCOBOL (`cobc`) performs compilation.**
 
