@@ -11,6 +11,19 @@ This repository contains lecture materials, GnuCOBOL examples, seven in-class ex
 
 No separate Windows or macOS compiler installation is needed **inside Codespaces**.
 
+
+## COBOL syntax highlighting in VS Code
+
+The Codespace installs the Bitlang COBOL extension automatically. If `.cob` files show only plain black text:
+
+1. Open a `.cob` file.
+2. Press **Ctrl + Shift + P** and run **Change Language Mode**.
+3. Select **BITLANG-COBOL**.
+4. To keep this setting for future files, run **Change Language Mode** again, select **Configure File Association for '.cob'...**, and choose **BITLANG-COBOL**.
+5. If highlighting still does not appear, confirm the Bitlang COBOL extension is enabled in the Codespace and run **Developer: Reload Window**.
+
+The repository's `.devcontainer/devcontainer.json` also configures `.cob` and `.cbl` files to use the Bitlang language identifier. Existing Codespaces may need **Codespaces: Rebuild Container** to pick up updated devcontainer settings.
+
 ## Compile and run
 
 Most original introductory examples use **fixed-format** COBOL (the traditional column layout). Compile them with the default fixed-format setting:
